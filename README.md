@@ -1,4 +1,4 @@
-Enterprise Log Threat Detection System | Python-Based SIEM
+# Enterprise Log Threat Detection System | Python-Based SIEM
 Project Overview
 
 This project is a real-time SSH log monitoring and threat detection system built using Python. It simulates core SIEM (Security Information and Event Management) capabilities by analyzing live system logs, detecting suspicious authentication behavior, and generating structured security alerts.
