@@ -30,11 +30,11 @@ This project demonstrates practical Blue Team skills including log analysis, eve
 
 - Brute-Force Attack Detection
 
--Detects:
+- Detects:
 
-  -Failed password events
+  - Failed password events
 
-  -Invalid user login attempts
+  - Invalid user login attempts
 
 # Triggers alert when:
 
