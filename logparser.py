@@ -13,7 +13,7 @@ process = subprocess.Popen(
     text=True
 )
 
-print("🔍 Live SSH monitoring started...\n")
+print("Live SSH monitoring started...\n")
 
 for line in process.stdout:
     if line.strip() == "":
@@ -56,7 +56,7 @@ for line in process.stdout:
             if failed_attempts[ip_address] >= 3 and ip_address not in alerted_ips:
                 alerted_ips.add(ip_address)
 
-                print("🚨 BRUTE FORCE ALERT")
+                print("BRUTE FORCE ALERT")
                 print("Time:", readable_time)
                 print("Username:", username)
                 print("Source IP:", ip_address)
