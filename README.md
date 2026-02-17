@@ -1,5 +1,6 @@
 # Enterprise Log Threat Detection System | Python-Based SIEM
-Project Overview
+
+# Project Overview
 
 This project is a real-time SSH log monitoring and threat detection system built using Python. It simulates core SIEM (Security Information and Event Management) capabilities by analyzing live system logs, detecting suspicious authentication behavior, and generating structured security alerts.
 
@@ -7,7 +8,7 @@ The system focuses on identifying brute-force login attempts and invalid user en
 
 This project demonstrates practical Blue Team skills including log analysis, event correlation, alert engineering, and SOC-style monitoring.
 
-Key Objectives
+# Key Objectives
 
 Monitor SSH authentication logs in real time
 
@@ -19,7 +20,8 @@ Generate structured, timestamped security alerts
 
 Simulate real-world SOC monitoring workflows
 
-Features
+# Features
+
 Real-Time Log Monitoring
 
 Uses journalctl to stream SSH logs live
@@ -34,7 +36,7 @@ Failed password events
 
 Invalid user login attempts
 
-Triggers alert when:
+# Triggers alert when:
 
 3 or more failed attempts occur from the same IP address
 
@@ -64,7 +66,7 @@ Alerts are written to alerts.log
 
 Supports forensic review and evidence preservation
 
-Technologies Used
+# Technologies Used
 
 Python 3
 
@@ -78,10 +80,9 @@ Linux system authentication logs
 
 Detection Logic Workflow
 
-Continuously monitors SSH logs using:
+# Continuously monitors SSH logs using:
 
 journalctl -u ssh -f -o json
-
 
 Parses each log entry as JSON.
 
