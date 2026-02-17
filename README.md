@@ -10,101 +10,101 @@ This project demonstrates practical Blue Team skills including log analysis, eve
 
 # Key Objectives
 
-Monitor SSH authentication logs in real time
+- Monitor SSH authentication logs in real time
 
-Detect repeated failed login attempts from the same IP
+- Detect repeated failed login attempts from the same IP
 
-Identify invalid username enumeration attempts
+- Identify invalid username enumeration attempts
 
-Generate structured, timestamped security alerts
+- Generate structured, timestamped security alerts
 
-Simulate real-world SOC monitoring workflows
+- Simulate real-world SOC monitoring workflows
 
 # Features
 
-Real-Time Log Monitoring
+- Real-Time Log Monitoring
 
-Uses journalctl to stream SSH logs live
+- Uses journalctl to stream SSH logs live
 
-Parses logs in structured JSON format
+- Parses logs in structured JSON format
 
-Brute-Force Attack Detection
+- Brute-Force Attack Detection
 
-Detects:
+-Detects:
 
-Failed password events
+  -Failed password events
 
-Invalid user login attempts
+  -Invalid user login attempts
 
 # Triggers alert when:
 
-3 or more failed attempts occur from the same IP address
+- 3 or more failed attempts occur from the same IP address
 
-Threshold-Based Correlation Logic
+- Threshold-Based Correlation Logic
 
-Maintains IP-based attempt tracking
+- Maintains IP-based attempt tracking
 
-Prevents duplicate alert flooding
+- Prevents duplicate alert flooding
 
-Simulates basic SIEM correlation rule behavior
+- Simulates basic SIEM correlation rule behavior
 
-Structured Alert Generation
+- Structured Alert Generation
 
-Each alert includes:
+- Each alert includes:
 
-Timestamp
+  - Timestamp
 
-Username
+  - Username
 
-Source IP address
+  - Source IP address
 
-Failed attempt count
+  - Failed attempt count
 
-Persistent Logging
+  - Persistent Logging
 
-Alerts are written to alerts.log
+  - Alerts are written to alerts.log
 
-Supports forensic review and evidence preservation
+- Supports forensic review and evidence preservation
 
 # Technologies Used
 
-Python 3
+- Python 3
 
-Regular Expressions (Regex)
+- Regular Expressions (Regex)
 
-JSON log parsing
+- JSON log parsing
 
-Linux journalctl
+- Linux journalctl
 
-Linux system authentication logs
+- Linux system authentication logs
 
-Detection Logic Workflow
+- Detection Logic Workflow
 
 # Continuously monitors SSH logs using:
 
-journalctl -u ssh -f -o json
+- journalctl -u ssh -f -o json
 
-Parses each log entry as JSON.
+- Parses each log entry as JSON.
 
-Extracts:
+- Extracts:
 
-MESSAGE
+- MESSAGE
 
-__REALTIME_TIMESTAMP
+- __REALTIME_TIMESTAMP
 
-Applies regex patterns to detect:
+- Applies regex patterns to detect:
 
-Failed password attempts
+- Failed password attempts
 
-Invalid user attempts
+- Invalid user attempts
 
-Tracks failed attempts per IP address.
+- Tracks failed attempts per IP address.
 
-Triggers alert if attempts ≥ 3.
+- Triggers alert if attempts ≥ 3.
 
-Writes structured alert to terminal and alerts.log.
+- Writes structured alert to terminal and alerts.log.
 
-Example Alert Output
+- Example Alert Output
 BRUTE FORCE ALERT
 Time: 2026-02-16 22:17:07
 Username: testuser
@@ -112,7 +112,7 @@ Source IP: ::1
 Failed Attempts: 3
 
 
-Saved in alerts.log as:
+- Saved in alerts.log as:
 
 2026-02-16 22:17:07 | BRUTE FORCE ALERT | User: testuser | IP: ::1 | Attempts: 3
 
